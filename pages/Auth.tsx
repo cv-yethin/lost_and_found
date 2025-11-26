@@ -27,38 +27,38 @@ const Auth: React.FC<AuthProps> = ({ setUser }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-16 p-8 bg-white rounded-2xl shadow-sm border border-slate-200">
+    <div className="max-w-md mx-auto mt-16 p-8 glass-panel rounded-2xl shadow-2xl border border-github-border">
       <div className="text-center mb-8">
-        <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+        <div className="w-12 h-12 bg-github-accent/20 border border-github-accent/50 rounded-xl flex items-center justify-center text-github-accent font-bold text-2xl mx-auto mb-4 shadow-[0_0_15px_rgba(88,166,255,0.3)]">
           L
         </div>
-        <h1 className="text-2xl font-bold text-slate-900">Welcome Back</h1>
-        <p className="text-slate-500 mt-2">Enter your email to login or register automatically.</p>
+        <h1 className="text-2xl font-bold text-white">Welcome Back</h1>
+        <p className="text-github-muted mt-2">Enter your email to login or register automatically.</p>
       </div>
 
       <form onSubmit={handleLogin} className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+          <label className="block text-sm font-medium text-github-text mb-2">Email Address</label>
           <input
             type="email"
             required
             placeholder="you@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+            className="w-full px-4 py-3 rounded-lg glass-input focus:outline-none focus:ring-1 focus:ring-github-accent/50 transition-all placeholder-gray-600"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3 bg-indigo-600 text-white rounded-lg font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200 disabled:opacity-70"
+          className="w-full py-3 bg-github-accent text-white rounded-lg font-bold hover:bg-blue-400 transition-all shadow-[0_0_20px_rgba(88,166,255,0.4)] disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {loading ? 'Signing in...' : 'Continue'}
         </button>
       </form>
       
-      <div className="mt-8 text-center text-xs text-slate-400">
+      <div className="mt-8 text-center text-xs text-github-muted">
         <p>This is a demo. No real password required.</p>
       </div>
     </div>

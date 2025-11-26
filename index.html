@@ -1,15 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lost & Found AI</title>
+    <title>Lost & Found Community</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                '"Noto Sans"',
+                'Helvetica',
+                'Arial',
+                'sans-serif',
+                '"Apple Color Emoji"',
+                '"Segoe UI Emoji"'
+              ],
+            },
+            colors: {
+              glass: {
+                100: 'rgba(255, 255, 255, 0.05)',
+                200: 'rgba(255, 255, 255, 0.1)',
+                300: 'rgba(255, 255, 255, 0.15)',
+                border: 'rgba(255, 255, 255, 0.1)',
+              },
+              github: {
+                bg: '#0d1117',
+                card: '#161b22',
+                border: '#30363d',
+                text: '#c9d1d9',
+                muted: '#8b949e',
+                accent: '#58a6ff',
+              }
+            }
+          }
+        }
+      }
+    </script>
     <style>
       body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
+        background-color: #0d1117;
+        background-image: 
+          radial-gradient(circle at 15% 50%, rgba(88, 166, 255, 0.08), transparent 25%), 
+          radial-gradient(circle at 85% 30%, rgba(163, 113, 247, 0.08), transparent 25%);
+        color: #c9d1d9;
+      }
+      .glass-panel {
+        background: rgba(22, 27, 34, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(240, 246, 252, 0.1);
+      }
+      .glass-card {
+        background: rgba(22, 27, 34, 0.6);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(240, 246, 252, 0.1);
+      }
+      .glass-input {
+        background: rgba(1, 4, 9, 0.5);
+        border: 1px solid rgba(48, 54, 61, 0.8);
+        color: #c9d1d9;
+      }
+      .glass-input:focus {
+        background: rgba(1, 4, 9, 0.8);
+        border-color: #58a6ff;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
       }
     </style>
   <script type="importmap">
@@ -17,10 +87,10 @@
   "imports": {
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
   }
 }
 </script>

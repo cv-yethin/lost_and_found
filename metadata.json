@@ -1,5 +1,5 @@
 {
-  "name": "Copy of Lost & Found AI-mark 1",
-  "description": "A community board for lost and found items. Features AI-powered image analysis to auto-fill post details, local persistence, and smart filtering.",
+  "name": "Lost & Found Community",
+  "description": "A community board for lost and found items. Features local persistence and smart filtering.",
   "requestFramePermissions": []
 }
